@@ -58,10 +58,19 @@ public class CalculadoraTest {
     }
     
     @Test
-    public void testRaiz() {
+    public void testRaizCuadrada() {
         double valorEsperado = 3;
-        double valorActual = Calculadora.calcular(9, (int) 0.5, 'r');
+        double valorActual = Calculadora.calcular(9, 2, 'r');
+        assertEquals(valorEsperado, valorActual);
     }
+    
+    @Test
+    public void testRaizCubica() {
+        double valorEsperado = 2;
+        double valorActual = Calculadora.calcular(8, 3, 'r');
+        assertEquals(valorEsperado, valorActual);
+    }
+    
     @Test
     public void testOperacionInvalida() {
         assertThrows(IllegalArgumentException.class, () -> {

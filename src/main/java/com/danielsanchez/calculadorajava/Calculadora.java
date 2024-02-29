@@ -37,7 +37,7 @@ public class Calculadora {
                 break;
             //Operacion mod
             case 'r':
-                respuesta = numero1 * numero2;
+                respuesta = Math.pow(numero1, (double)1/numero2);
                 break;
             //Operacion Raiz Cuadrada
 
